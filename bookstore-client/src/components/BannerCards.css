@@ -1,0 +1,50 @@
+.banner .swiper {
+    width: 400px;
+    height: 500px;
+}
+
+.banner .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.banner .swiper-slide:nth-child(1n) {
+    background-image: url('../assets/bookCovers/lord-of-the-flies.jpg');
+}
+
+.banner .swiper-slide:nth-child(2n) {
+    background-image: url('../assets/bookCovers/and-then-there-were-none.jpg');
+}
+
+.banner .swiper-slide:nth-child(3n) {
+    background-image: url('../assets/bookCovers/anxiety.jpg');
+    ;
+}
+
+.banner .swiper-slide:nth-child(4n) {
+    background-image: url('../assets/bookCovers/dreams-of-purple-yesterday.jpg');
+    ;
+}
+
+.banner .swiper-slide:nth-child(5n) {
+    background-image: url('../assets/bookCovers/fear-of-flying.jpg');
+    ;
+}
+
+.banner .swiper-slide:nth-child(6n) {
+    background-image: url('../assets/bookCovers/frankes-penguin.jpg');
+    ;
+}
+
+.banner .swiper-slide:nth-child(7n) {
+    background-image: url('../assets/bookCovers/if-you-knew.jpg');
+}
+
+.banner .swiper-slide:nth-child(8n) {
+    background-image: url('../assets/bookCovers/moby-dick.jpg');
+}
