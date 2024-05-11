@@ -16,12 +16,22 @@ const Shop = () => {
       <div className="grid gap-8 my-12 ld:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1">
         {books.map((book) => (
           <Card className="max-w-sm">
-            <img src={book.imageUrl} alt="" className=" h-3/4" />
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              <p>{book.title}</p>
-            </h5>
-            <p className=" ml-2 font-normal text-gray-700 dark:text-gray-400">
-              {book.description}
+            <div className="flex justify-center items-center">
+              <img
+                src={book.imageUrl}
+                alt=""
+                className="max-w-full max-h-fit"
+              />
+            </div>
+
+            <p>
+              {" "}
+              <h5 className="text-2xl font-bold tracking-tight text-gray-900">
+                <p>{book.title}</p>
+              </h5>
+              <p className=" ml-2 font-normal text-gray-700 dark:text-gray-400">
+                {book.description}
+              </p>
             </p>
             <button className="bg-green-800 font-semibold text-emerald-200 hover:text-white rounded">
               Checkout Book

@@ -31,6 +31,7 @@ const bookSchema = new mongoose.Schema({
   // price: { type: Number, required: true },
   language: { type: [String], required: true },
   publishDate: { type: Date, required: true },
+  pdfUrl: { type: String, required: false },
 });
 
 // const User = mongoose.model("User", userSchema);
