@@ -1,8 +1,6 @@
 import { Sidebar } from "flowbite-react";
 import {
-  HiArrowCircleDown,
   HiArrowCircleRight,
-  HiArrowSmRight,
   HiChartPie,
   HiInbox,
   HiOutlineCloudUpload,

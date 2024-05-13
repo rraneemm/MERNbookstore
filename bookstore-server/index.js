@@ -3,11 +3,14 @@ const app = express();
 const port = process.env.PORT || 5000;
 const cors = require("cors");
 const { ObjectId } = require("mongodb");
+// import dotenv from "dotenv";
+// dotenv.config();
+require("dotenv").config();
 //middleware to connect to the front end
 app.use(cors());
 app.use(express.json());
-
-//databse
+console.log(process.env.apiKey);
+//database
 const mongoose = require("mongoose");
 
 // const userSchema = new mongoose.Schema({
@@ -28,9 +31,10 @@ const bookSchema = new mongoose.Schema({
     enum: ["PAPERBACK", "HARDCOVER", "E-BOOK"],
     required: true,
   },
-  // price: { type: Number, required: true },
+  price: { type: Number, required: true },
   language: { type: [String], required: true },
   publishDate: { type: Date, required: true },
+
   pdfUrl: { type: String, required: false },
 });
 
@@ -93,8 +97,20 @@ mongoose
       const deletedBook = await Book.deleteOne(filter);
       return res.send(deletedBook);
     });
+    app.get("/api/environment", (req, res) => {
+      console.log(process.env.apiKey);
+      res.send({
+        apiKey: process.env.apiKey,
+        authDomain: "mern-bookstore-9efab.firebaseapp.com",
+        projectId: "mern-bookstore-9efab",
+        storageBucket: "mern-bookstore-9efab.appspot.com",
+        messagingSenderId: "601412716548",
+        appId: "1:601412716548:web:0acb8a2e64712228d20d51",
+      });
+    });
   })
   .catch((err) => console.error("Error connecting to DataBase: MongoDB:", err));
+
 //to screate a server
 app.listen(port, () => {
   console.log(`Server Listening on port ${port}...`);

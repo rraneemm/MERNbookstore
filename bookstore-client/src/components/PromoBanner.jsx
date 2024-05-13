@@ -12,11 +12,14 @@ const PromoBanner = () => {
           <h2 className="text-4xl font-bold mb-6 leading-snug">
             2024 Tanta Book CLub for Fiction Enthusiasts{" "}
           </h2>
-          <Link to="/register" className=" block">
+          {/*<Link to="/register" className=" block">
             <button className="bg-stone-500 text-balck font-light px-5 py-3 rounded hover:bg-green-500 transition-all duration:300 ">
               Secure Your Place Now!
             </button>
-          </Link>
+  </Link>*/}
+          <span className=" text-stone-600 font-light flex justify-center">
+            Registerations open when dates are launched.
+          </span>
         </div>
         <div>
           <img src={promoPic} alt="" className="w-96 rounded" />

@@ -28,7 +28,10 @@ const Navbar = () => {
     { link: "About", path: "/about" },
     { link: "Blog", path: "/blog" },
     { link: "Shop", path: "/shop" },
-    { link: "Sell Your Book", path: "/admin/dashboard" },
+    { link: "Sign Up", path: "/sign-up" },
+    {
+      /*{ link: "Sell Your Book", path: "/admin/dashboard" },*/
+    },
   ];
   return (
     <header className="w-full bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300">
@@ -44,7 +47,7 @@ const Navbar = () => {
             className="text-2xl font-bold text-green-700 flex items-center gap-2"
           >
             <FaBlog className="inline-block" />
-            Books
+            Books Empyrean
           </Link>
           {/*nav items for large devices: some map operations */}
           <ul className="md:flex space-x-12 hidden">

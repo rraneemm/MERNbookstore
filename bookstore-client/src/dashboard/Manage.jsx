@@ -7,7 +7,10 @@ const Manage = () => {
   useEffect(() => {
     fetch("http://localhost:5000/books")
       .then((res) => res.json())
-      .then((data) => setBooks(data));
+      .then((data) => {
+        console.log(data);
+        setBooks(data);
+      });
   }, []);
 
   const handleDelete = (id) => {
