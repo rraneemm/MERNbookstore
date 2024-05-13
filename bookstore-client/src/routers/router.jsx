@@ -7,7 +7,6 @@ import Shop from "../components/Shop";
 import About from "../components/About";
 import Blog from "../components/Blog";
 import SingleBook from "../components/SingleBook";
-import Register from "../components/Register";
 import DashboardLayout from "../dashboard/DashboardLayout";
 import Dashboard from "../dashboard/Dashboard";
 import UploadBook from "../dashboard/UploadBook";
