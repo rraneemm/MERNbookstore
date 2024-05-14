@@ -1,31 +1,54 @@
 import { createContext, useEffect, useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { initializeApp } from "firebase/app";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import app from "../firebase/firebase.config";
 
-const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: "mern-bookstore-9efab.firebaseapp.com",
-  projectId: "mern-bookstore-9efab",
-  storageBucket: "mern-bookstore-9efab.appspot.com",
-  messagingSenderId: "601412716548",
-  appId: "1:601412716548:web:0acb8a2e64712228d20d51",
-};
-const app = initializeApp(firebaseConfig);
-
+const googleProvider = new GoogleAuthProvider();
 export const AuthNContext = createContext();
 const authN = getAuth(app);
 
 const AuthNProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(authN, email, password);
   };
 
-  const authInfo = { createUser };
-  return;
-  <AuthNContext.Provider value={authInfo}>{children}</AuthNContext.Provider>;
+  const loginWithGoogle = () => {
+    setLoading(true);
+    return signInWithPopup(authN, googleProvider);
+  };
+  const login = (email, password) => {
+    setLoading(true);
+    return signInWithEmailAndPassword(authN, email, password);
+  };
+  const logOut = () => {
+    return signOut(authN);
+  };
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(authN, (currentUser) => {
+      console.log(currentUser);
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => {
+      return unsubscribe();
+    };
+  }, []);
+  const authInfo = { user, createUser, loginWithGoogle, login, logOut };
+
+  return (
+    <AuthNContext.Provider value={authInfo}>{children}</AuthNContext.Provider>
+  );
 };
 
 export default AuthNProvider;

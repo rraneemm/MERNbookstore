@@ -1,21 +1,21 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthNContext } from "../context/AuthNProvider";
 import googleLogo from "../assets/Google-Symbol.png";
 
-const SignUp = () => {
-  const { createUser, loginWithGoogle } = useContext(AuthNContext);
+const Login = () => {
+  const { login, loginWithGoogle } = useContext(AuthNContext);
   const { error, setError } = useState("error");
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
-  const handleSignUp = (event) => {
+  const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
 
-    createUser(email, password)
+    login(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         navigate(from, { replace: true });
@@ -38,11 +38,11 @@ const SignUp = () => {
         <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
           <div className="max-w-md mx-auto">
             <div>
-              <h1 className="text-2xl font-semibold">Sign Up Form</h1>
+              <h1 className="text-2xl font-semibold">Log In Form</h1>
             </div>
             <div className="divide-y divide-gray-200">
               <form
-                onSubmit={handleSignUp}
+                onSubmit={handleLogin}
                 className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7"
               >
                 <div className="relative">
@@ -63,18 +63,25 @@ const SignUp = () => {
                     placeholder="Password"
                   />
                 </div>
+                {error ? (
+                  <p className="text-red-600 text-base">
+                    Credentials wrong, please try again.
+                  </p>
+                ) : (
+                  ""
+                )}
                 <p>
                   <Link
-                    to="/login"
+                    to="/sign-up"
                     className="text-green-500 font-bold underline"
                   >
-                    Login
+                    Sing Up
                   </Link>{" "}
-                  here if you already have an account!
+                  here if you don't have an account!
                 </p>
                 <div className="relative">
                   <button className="bg-green-500 text-white rounded-md px-2 py-1">
-                    Jump In!
+                    Welcome Back!
                   </button>
                 </div>
               </form>
@@ -90,7 +97,7 @@ const SignUp = () => {
                   alt=""
                   className="w-12 h-8 inline-block mt-1"
                 />
-                Jump in with Google
+                With Google?
               </button>
             </div>
           </div>
@@ -100,4 +107,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Login;

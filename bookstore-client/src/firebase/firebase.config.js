@@ -73,13 +73,14 @@ import { useEffect } from "react";
 // export { app };
 // export default appInstance;
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
+  apiKey: import.meta.env.VITE_APIKEY,
   authDomain: "mern-bookstore-9efab.firebaseapp.com",
   projectId: "mern-bookstore-9efab",
   storageBucket: "mern-bookstore-9efab.appspot.com",
   messagingSenderId: "601412716548",
   appId: "1:601412716548:web:0acb8a2e64712228d20d51",
 };
+console.log(firebaseConfig);
 const app = initializeApp(firebaseConfig);
 
 export default app;

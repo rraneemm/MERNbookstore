@@ -53,14 +53,102 @@ const Review = () => {
               </div>
               <div className="mt-7">
                 <p className="mb-5">
-                  Sed vel metus in diam congue sodales vitae nec odio. Sed at
-                  enim nec purus varius fermentum. Nam gravida risus in neque
-                  fermentum, vel eleifend metus mattis.
+                  Excellent site! I've been using it for months, and it's been a
+                  lifesaver for my work. Highly recommended!
                 </p>
-                <h5 className=" text-emerald-800 font-serif font-medium text-base">
-                  Rebecca GooHunt
+                <h5 className="text-emerald-800 font-serif font-medium text-base">
+                  John Doe
                 </h5>
-                <p className="mb-5 "> History Enthusiast</p>
+                <p className="mb-5">Software Developer</p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border">
+            <div className="space-y-6">
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+              <div className="mt-7">
+                <p className="mb-5">
+                  This site is amazing! It exceeded all my expectations. I
+                  couldn't be happier with my purchase.
+                </p>
+                <h5 className="text-emerald-800 font-serif font-medium text-base">
+                  Jane Smith
+                </h5>
+                <p className="mb-5">Marketing Manager</p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border">
+            <div className="space-y-6">
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+              <div className="mt-7">
+                <p className="mb-5">
+                  Absolutely love it! The quality is top-notch, and it's
+                  incredibly easy to use. Would definitely recommend it to
+                  others.
+                </p>
+                <h5 className="text-emerald-800 font-serif font-medium text-base">
+                  Alex Johnson
+                </h5>
+                <p className="mb-5">Graphic Designer</p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border">
+            <div className="space-y-6">
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+              <div className="mt-7">
+                <p className="mb-5">
+                  I'm impressed with the functionality and design of this site.
+                  It's definitely worth the investment!
+                </p>
+                <h5 className="text-emerald-800 font-serif font-medium text-base">
+                  Emily Davis
+                </h5>
+                <p className="mb-5">UX Designer</p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border">
+            <div className="space-y-6">
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+
+                <FaStar />
+              </div>
+              <div className="mt-7">
+                <p className="mb-5">
+                  Couldn't be happier with my purchase! It's been a game-changer
+                  for my siteivity.
+                </p>
+                <h5 className="text-emerald-800 font-serif font-medium text-base">
+                  Michael Brown
+                </h5>
+                <p className="mb-5">Entrepreneur</p>
               </div>
             </div>
           </SwiperSlide>
@@ -75,14 +163,12 @@ const Review = () => {
               </div>
               <div className="mt-7">
                 <p className="mb-5">
-                  Sed vel metus in diam congue sodales vitae nec odio. Sed at
-                  enim nec purus varius fermentum. Nam gravida risus in neque
-                  fermentum, vel eleifend metus mattis.
+                  Amazing site! It's been an essential tool for my daily tasks.
                 </p>
-                <h5 className=" text-emerald-800 font-serif font-medium text-base">
-                  Rebecca GooHunt
+                <h5 className="text-emerald-800 font-serif font-medium text-base">
+                  Sarah Lee
                 </h5>
-                <p className="mb-5 "> History Enthusiast</p>
+                <p className="mb-5">Project Manager</p>
               </div>
             </div>
           </SwiperSlide>
@@ -93,106 +179,16 @@ const Review = () => {
                 <FaStar />
                 <FaStar />
                 <FaStar />
-                <FaStar />
               </div>
               <div className="mt-7">
                 <p className="mb-5">
-                  Sed vel metus in diam congue sodales vitae nec odio. Sed at
-                  enim nec purus varius fermentum. Nam gravida risus in neque
-                  fermentum, vel eleifend metus mattis.
+                  Great site! It's been instrumental in streamlining my
+                  workflow.
                 </p>
-                <h5 className=" text-emerald-800 font-serif font-medium text-base">
-                  Rebecca GooHunt
+                <h5 className="text-emerald-800 font-serif font-medium text-base">
+                  Amanda Clark
                 </h5>
-                <p className="mb-5 "> History Enthusiast</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border">
-            <div className="space-y-6">
-              <div className="text-amber-500 flex gap-2">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </div>
-              <div className="mt-7">
-                <p className="mb-5">
-                  Sed vel metus in diam congue sodales vitae nec odio. Sed at
-                  enim nec purus varius fermentum. Nam gravida risus in neque
-                  fermentum, vel eleifend metus mattis.
-                </p>
-                <h5 className=" text-emerald-800 font-serif font-medium text-base">
-                  Rebecca GooHunt
-                </h5>
-                <p className="mb-5 "> History Enthusiast</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border">
-            <div className="space-y-6">
-              <div className="text-amber-500 flex gap-2">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </div>
-              <div className="mt-7">
-                <p className="mb-5">
-                  Sed vel metus in diam congue sodales vitae nec odio. Sed at
-                  enim nec purus varius fermentum. Nam gravida risus in neque
-                  fermentum, vel eleifend metus mattis.
-                </p>
-                <h5 className=" text-emerald-800 font-serif font-medium text-base">
-                  Rebecca GooHunt
-                </h5>
-                <p className="mb-5 "> History Enthusiast</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border">
-            <div className="space-y-6">
-              <div className="text-amber-500 flex gap-2">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </div>
-              <div className="mt-7">
-                <p className="mb-5">
-                  Sed vel metus in diam congue sodales vitae nec odio. Sed at
-                  enim nec purus varius fermentum. Nam gravida risus in neque
-                  fermentum, vel eleifend metus mattis.
-                </p>
-                <h5 className=" text-emerald-800 font-serif font-medium text-base">
-                  Rebecca GooHunt
-                </h5>
-                <p className="mb-5 "> History Enthusiast</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className="shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border">
-            <div className="space-y-6">
-              <div className="text-amber-500 flex gap-2">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </div>
-              <div className="mt-7">
-                <p className="mb-5">
-                  Sed vel metus in diam congue sodales vitae nec odio. Sed at
-                  enim nec purus varius fermentum. Nam gravida risus in neque
-                  fermentum, vel eleifend metus mattis.
-                </p>
-                <h5 className=" text-emerald-800 font-serif font-medium text-base">
-                  Rebecca GooHunt
-                </h5>
-                <p className="mb-5 "> History Enthusiast</p>
+                <p className="mb-5">Content Creator</p>
               </div>
             </div>
           </SwiperSlide>

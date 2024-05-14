@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 import { Card } from "flowbite-react";
 
 const Shop = () => {
@@ -15,13 +15,15 @@ const Shop = () => {
       <h2 className="text-5xl font-bold text-center">Explore Your Empyrean</h2>
       <div className="grid gap-8 my-12 ld:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1">
         {books.map((book) => (
-          <Card className="max-w-sm">
+          <Card key={book._id} className="max-w-sm">
             <div className="flex justify-center items-center">
-              <img
-                src={book.imageUrl}
-                alt=""
-                className="max-w-full max-h-fit"
-              />
+              <Link to={`/book/${book._id}`}>
+                <img
+                  src={book.imageUrl}
+                  alt=""
+                  className="max-w-full max-h-fit"
+                />
+              </Link>
             </div>
 
             <p>
@@ -33,9 +35,11 @@ const Shop = () => {
                 {book.description}
               </p>
             </p>
-            <button className="bg-green-800 font-semibold text-emerald-200 hover:text-white rounded">
-              Checkout Book
-            </button>
+            <Link to={`/book/${book._id}`}>
+              <button className="bg-green-800 font-semibold text-emerald-200 hover:text-white rounded">
+                Checkout Book
+              </button>
+            </Link>
           </Card>
         ))}
       </div>

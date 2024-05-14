@@ -1,0 +1,70 @@
+/* Add this to your existing CSS file or create a new one */
+
+.about-page {
+    padding-top: 60px;
+    /* Space for the nav bar */
+    padding-bottom: 20px;
+    /* Add some space at the bottom if needed */
+}
+
+.spacer-top {
+    height: 60px;
+    /* Space for the nav bar */
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    color: #004d40;
+    font-size: 5rem;
+    font-weight: bold;
+    /* emerald */
+}
+
+.banner-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.banner-section h2 {
+    color: #388e3c;
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* green amber */
+}
+
+.mission-section {
+    margin-bottom: 60px;
+}
+
+.mission-section h2 {
+    color: #fbc02d;
+    font-size: 2.5rem;
+    font-weight: bold;
+    /* yellow */
+}
+
+.testimonials-section {
+    margin-bottom: 60px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.testimonial {
+    background-color: #c5e1a5;
+    /* light green */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.testimonial p {
+    margin-bottom: 10px;
+    font-style: italic;
+}
